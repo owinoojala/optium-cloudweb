@@ -1,0 +1,241 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;400;500;700&display=swap');
+
+*{
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: scroll;
+    right: 0;
+    flex-wrap: wrap;
+}
+pre,code{
+    font-family: monospace;
+}
+:root{
+    --light-color:#fff;
+    --primary-color:rgb(4, 158, 158);
+    --dark-color:rgb(2, 2, 56);
+    --night-color:rgb(0,0,0);
+    --success-color:rgb(0, 128, 49);
+}
+section{width: 100%;}
+
+/*Base claases */
+.header-section{
+    padding: 1.5rem 0;
+}
+.site-logo{
+    font-size: 1.8rem;
+}
+.navbar ul{
+    list-style: none;
+    align-items: flex-end;
+}
+.nav-item{
+    margin-inline: .5rem;
+}
+.links a:hover,
+.nav-item a:hover{
+    border-bottom: #fff 1px solid;
+}
+.showcase{
+    height: auto;
+    padding-top: 2rem;
+}
+.docs-main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+.docs-main a{
+    color: black;
+}
+.docs-main a:hover{
+    color: var(--primary-color);
+}
+
+.docs-head .grid,
+.features-intro .grid,
+.features-head .grid,
+.cloud-hosting .grid,
+.showcase .grid{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+.docs-main .flex,
+.showcase .flex{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.showcase .description p{
+    margin-block: 1rem;
+}
+.showcase::after{
+    content: " ";
+    position: absolute;
+    height: 70px;
+    background-color: #fff;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    transform: skewY(-3deg);
+
+}
+.showcase form{
+    color: grey;
+    position: relative;
+    top: 4rem;
+    width: 250px;
+    height: 300px;
+    z-index: 100;
+    padding: 3rem;
+    
+}
+form input{
+    border: none;
+    border-bottom: solid 1px rgb(160, 157, 157);
+    width:100%;
+    padding-block-start: 2rem;
+}
+form input:focus{
+    outline: none;
+}
+
+.stats{
+    margin-block-start: 10rem;
+}
+.stats-intro{
+    width: 50%;
+    margin: auto;
+    margin-block-end: 3rem;
+}
+.stats .grid{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+ h3{
+    margin-block-end: .8rem;
+}
+
+.cli-section img{
+    max-width: 90%;
+    margin: auto;
+}
+.cli-section .grid{
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap:3rem;
+}
+.docs-head img,
+.features-intro img,
+.features-head img,
+.cloud-hosting img{
+    height: 250px;
+    justify-self: flex-end;
+}
+.languages .grid{
+    grid-template-columns: repeat(7,1fr);
+}
+.languages .flex{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.languages .card{
+    transition: transform .2s ease-in;
+    margin: .5rem;
+}
+
+.languages .card:hover{
+    transform: translateY(-20px);
+}
+footer .grid{
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+}
+footer .links{
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer .social{
+    justify-self: flex-end;
+}
+.features-main .feature{
+    justify-content: flex-start;
+}
+.features-main .grid > *:first-child{
+    grid-column: 1/span 3;
+}
+.features-main .grid > *:nth-child(2){
+    grid-column: 1/span 2;
+}
+
+@media (max-width:768px){
+    .showcase{
+        height: auto;
+    }
+    .grid,
+    .docs-main .grid,
+    .docs-head .grid,
+    .showcase .grid,
+    .features-head .grid,
+    .features-intro .grid,
+    .stats .grid, .cli-section .grid,
+    .cloud-hosting .grid
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr; 
+    }
+    .features-intro .description,
+    .features-head .intro,
+    .showcase .description{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+
+    }
+   
+    .features-main .grid > *:first-child,
+    .features-main .grid > *:nth-child(2){
+        grid-column: 1;
+    }
+    .docs-head img,
+    .features-intro img,
+    .features-head img,
+    .showcase form{
+        justify-self: center;
+        margin: auto;
+
+       
+    }
+    footer .grid{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    footer .social,
+    footer .links{
+        align-items: flex-start;
+        margin-left: -1rem;
+        padding: 0;
+    }
+   
+        
+    }
+    @media (max-width: 500px){
+        .header-section .navbar{
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar ul{
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: .8rem;
+            margin-block-start: .4rem;
+            border-radius: .4rem;
+         }
+    }
+
